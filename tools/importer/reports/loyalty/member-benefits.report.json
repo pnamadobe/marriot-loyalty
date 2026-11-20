@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.marriott.com/loyalty/member-benefits.mi",
+  "path": "loyalty/member-benefits",
+  "timestamp": "2026-11-20T18:36:26.968Z",
+  "title": "Membership Levels & Benefits",
+  "template": "loyalty",
+  "blocks": [
+    "hero-overlay",
+    "hero-overlay",
+    "tabs-icon-panel",
+    "card-link-banner",
+    "table-comparison",
+    "table-comparison",
+    "cards-image-link",
+    "cards-overlay",
+    "cards-icon",
+    "cards-logo-grid"
+  ],
+  "importScript": "83e4744ef4e0"
+}

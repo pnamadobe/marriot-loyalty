@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "marriot-loyalty": {
+      "previewOrg": "pnamadobe",
+      "previewSite": "marriot-loyalty",
+      "contentHostUrl": "https://content.da.live/pnamadobe/marriot-loyalty/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}
