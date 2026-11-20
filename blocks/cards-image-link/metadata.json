@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-image-link",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "grid of linked image cards (image, title, description) where each card links to a detail page",
+    "layout": "responsive grid; image on top (4:3), text below in a shadowed card; whole card clickable"
+  },
+  "contentPattern": {
+    "structure": "one row per card: cell 1 image; cell 2 title heading, description paragraph and link (the last link covers the card)",
+    "rows": [
+      {
+        "row": "one per card",
+        "cells": [
+          "Image or icon",
+          "Optional eyebrow, title heading, description, CTA link (or linked logo images for cards-logo-grid)"
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Earn Points / Redeem Points style navigation cards, often beside default content in a split section.",
+  "reuseGuidance": "Use for image-led link cards with text below. For text over the image use cards-overlay; for icon-led cards use cards-icon.",
+  "sourceUrl": "https://www.marriott.com/loyalty/member-benefits.mi",
+  "sectionMetadata": [
+    {
+      "layout": "split"
+    }
+  ]
+}

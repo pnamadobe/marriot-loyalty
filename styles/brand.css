@@ -1,0 +1,46 @@
+/* Marriott Bonvoy brand tokens (from migration-work/brand.json); overrides styles.css defaults */
+:root {
+  color-scheme: light;
+
+  /* Swiss 721 is licensed and not web-served to this site; Helvetica is its metric twin */
+  --font-family: "Swiss-721", "Helvetica Neue", helvetica, arial, sans-serif;
+  --color-dark: #1c1c1c;
+  --color-text: #1c1c1c;
+  --color-link: #1c1c1c;
+  --color-link-hover: #1c1c1c;
+  --color-background: #f4f4f4;
+  --color-surface: #fff;
+  --color-muted: #707070;
+  --color-border: #c4c4c4;
+  --color-brand: #ff8d6b;
+  --color-accent: #1c1c1c;
+  --color-shaded: #fff;
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 25px;
+  --heading-font-size-l: 18px;
+  --heading-font-size-m: 16px;
+  --heading-font-size-s: 14px;
+  --heading-font-size-xs: 12px;
+  --heading-line-height: 1.1;
+  --body-line-height: 1.5;
+  --radius-pill: 52px;
+  --radius-card: 14px;
+  --section-spacing: 48px;
+}
+
+/* pages that name a subnav reserve its row before the header loads */
+:root:has(meta[name="subnav"]) {
+  --subnav-height: 56px;
+}
+
+@media (width >= 900px) {
+  :root {
+    --heading-font-size-xxl: 40px;
+    --heading-font-size-xl: 29px;
+    --header-height: 88px;
+  }
+
+  :root:has(meta[name="subnav"]) {
+    --subnav-height: 65px;
+  }
+}

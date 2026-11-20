@@ -1,0 +1,31 @@
+{
+  "variantName": "tabs-icon-panel",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "self-contained tab component switching between tier panels, each with intro text and a row of icon features",
+    "layout": "horizontal tab strip (scrolls on small screens) above one visible panel; panel intro centered, icon features in equal columns on desktop, stacked on mobile"
+  },
+  "contentPattern": {
+    "structure": "one row per tab: cell 1 is the tab label; cell 2 is the panel: eyebrow paragraph, tier name heading, tagline paragraph, then per feature an icon (image or :icon:) followed by a heading and a paragraph",
+    "rows": [
+      {
+        "row": "one per tab",
+        "cells": [
+          "Tab label",
+          "Tab content: eyebrow paragraph, tier name heading, tagline paragraph, then per feature an icon image, a heading and a paragraph"
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Membership tiers or any set of mutually exclusive panels that live in one section.",
+  "reuseGuidance": "Use when all tab content fits in one block. When each tab needs whole sections with their own blocks, use advanced-tabs instead.",
+  "sourceUrl": "https://www.marriott.com/loyalty/member-benefits.mi",
+  "sectionMetadata": [
+    {
+      "style": "centered"
+    }
+  ]
+}

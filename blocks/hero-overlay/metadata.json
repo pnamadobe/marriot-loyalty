@@ -1,0 +1,32 @@
+{
+  "variantName": "hero-overlay",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "full-bleed photo with an overlaid heading, subtitle and CTA buttons (page hero and join banner)",
+    "layout": "background image fills the block; text sits bottom-left over a dark gradient scrim"
+  },
+  "contentPattern": {
+    "structure": "row 1: background image; row 2: heading (H1 for the page hero, H2 elsewhere), subtitle paragraph, CTA links (bold = primary button, italic = secondary), optional location/caption link",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          "Background image"
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          "Heading, subheading paragraph, CTA links (bold = primary, italic = secondary)"
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Page-top hero and in-page join/promotional banners that put text over a photo.",
+  "reuseGuidance": "Use for any photo-background banner with heading and CTAs. For text beside an image use columns; for a split hero use the base hero block.",
+  "sourceUrl": "https://www.marriott.com/loyalty/member-benefits.mi",
+  "sectionMetadata": []
+}

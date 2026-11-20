@@ -1,0 +1,27 @@
+{
+  "variantName": "card-link-banner",
+  "baseBlock": "card",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "single horizontal linked card with an icon tile, title, description and chevron; the whole card is clickable",
+    "layout": "icon tile at left, text in the middle, chevron at right, inside a shadowed box"
+  },
+  "contentPattern": {
+    "structure": "one row: cell 1 icon or image; cell 2 heading (or bold title), description paragraph and a link to the destination (the first link in the cell covers the whole card)",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          "Image or icon",
+          "Heading, description paragraph, link (last paragraph becomes the CTA)"
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Standalone promo link to a detail page, e.g. Lifetime Member Benefits.",
+  "reuseGuidance": "Use for one prominent link row. For several cards in a grid use cards-image-link or cards-icon; for a vertical card use card.",
+  "sourceUrl": "https://www.marriott.com/loyalty/member-benefits.mi",
+  "sectionMetadata": []
+}

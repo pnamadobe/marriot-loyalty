@@ -1,0 +1,27 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "small icon cards with title, short text and an arrow CTA link",
+    "layout": "responsive grid of boxed cards; icon top, text, CTA pinned to the bottom"
+  },
+  "contentPattern": {
+    "structure": "one row per card: cell 1 icon (image or :icon:); cell 2 title heading, description paragraph, CTA link in its own last paragraph",
+    "rows": [
+      {
+        "row": "one per card",
+        "cells": [
+          "Image or icon",
+          "Optional eyebrow, title heading, description, CTA link (or linked logo images for cards-logo-grid)"
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Unlock More with Points style feature/action lists.",
+  "reuseGuidance": "Use for icon-led actions or features. For photo-led cards use cards-image-link.",
+  "sourceUrl": "https://www.marriott.com/loyalty/member-benefits.mi",
+  "sectionMetadata": []
+}

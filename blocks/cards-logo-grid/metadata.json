@@ -1,0 +1,31 @@
+{
+  "variantName": "cards-logo-grid",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "brand-category cards, each with title, description and a grid of linked brand logos",
+    "layout": "four columns on desktop, stacking on smaller screens; logos in a 3-up grid under the text"
+  },
+  "contentPattern": {
+    "structure": "one row per card: optional cell 1 image; cell 2 title heading, description paragraph, then paragraphs of linked logo images (gathered into the logo grid)",
+    "rows": [
+      {
+        "row": "one per card",
+        "cells": [
+          "Image or icon",
+          "Optional eyebrow, title heading, description, CTA link (or linked logo images for cards-logo-grid)"
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Brand portfolio ribbon (Luxury, Full Service, Select Service, Longer Stays).",
+  "reuseGuidance": "Likely site-wide; author the section once as a fragment and reference it. For plain logo strips without card text, a single card row also works.",
+  "sourceUrl": "https://www.marriott.com/loyalty/member-benefits.mi",
+  "sectionMetadata": [
+    {
+      "style": "white, centered"
+    }
+  ]
+}

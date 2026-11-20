@@ -1,0 +1,112 @@
+.cards-overlay {
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
+
+  ul {
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  li {
+    position: relative;
+    display: grid;
+    grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+    aspect-ratio: 1;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius-card);
+    color: #fff;
+    background-color: var(--color-dark);
+    scroll-snap-align: start;
+
+    > * {
+      grid-area: 1 / 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 31px;
+      bottom: 29px;
+      width: 7px;
+      height: 7px;
+      border: solid;
+      border-width: 2.5px 2.5px 0 0;
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+  }
+
+  .cards-overlay-image {
+    picture,
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .cards-overlay-body {
+    align-self: end;
+    padding: 24px 0 24px 24px;
+    background-image: linear-gradient(0deg, rgb(0 0 0 / 62%), rgb(0 0 0 / 54%), rgb(0 0 0 / 0%));
+
+    > * {
+      max-width: 75%;
+      margin: 0;
+    }
+
+    > * + * {
+      margin-top: 8px;
+    }
+  }
+
+  .cards-overlay-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.108em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: normal;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .cards-overlay-link {
+    color: inherit;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  @media (width >= 900px) {
+    ul {
+      grid-auto-flow: row;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      overflow: visible;
+    }
+  }
+}

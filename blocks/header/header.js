@@ -198,7 +198,15 @@ function decorateMegaMenu(li) {
   if (!menu) return null;
   const wrapper = document.createElement('div');
   wrapper.className = 'mega-menu';
-  wrapper.append(menu);
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.className = 'menu-close';
+  close.textContent = 'Close';
+  close.addEventListener('click', () => {
+    closeAllMenus();
+    li.querySelector('.main-nav-link')?.focus();
+  });
+  wrapper.append(menu, close);
   li.append(wrapper);
   return wrapper;
 }
@@ -301,6 +309,28 @@ export function decorateHeaderContent(header) {
   new ResizeObserver(() => syncDrawerState(header)).observe(header);
 }
 
+// Optional section navigation under the header, named by the page's `subnav` metadata
+async function decorateSubnav(el, path) {
+  const fragment = await loadFragment(`${locale.prefix}${path}`);
+  const list = fragment.querySelector('ul');
+  if (!list) return;
+  const nav = document.createElement('nav');
+  nav.className = 'sub-nav';
+  nav.ariaLabel = list.querySelector('a')?.textContent || '';
+  list.classList.add('main-nav-list');
+  nav.append(list);
+  const here = window.location.pathname.replace(/^\/content(?=\/)/, '');
+  for (const li of list.querySelectorAll(':scope > li')) {
+    const current = [...li.querySelectorAll('a')].filter((a) => a.pathname === here);
+    for (const a of current) a.ariaCurrent = 'page';
+    if (current.length) li.classList.add('is-current');
+    decorateNavItem(li);
+  }
+  nav.addEventListener('keydown', menuKeydown);
+  nav.addEventListener('focusout', menuFocusout);
+  el.append(nav);
+}
+
 /**
  * loads and decorates the header
  * @param {Element} el The header element
@@ -308,11 +338,13 @@ export function decorateHeaderContent(header) {
 export default async function init(el) {
   const headerMeta = getMetadata('header-source');
   const path = headerMeta || HEADER_PATH;
+  const subnav = getMetadata('subnav');
   try {
     const fragment = await loadFragment(`${locale.prefix}${path}`);
     fragment.classList.add('header-content');
     el.append(fragment);
     decorateHeaderContent(el);
+    if (subnav) await decorateSubnav(el, subnav);
   } catch (e) {
     throw Error(e);
   }

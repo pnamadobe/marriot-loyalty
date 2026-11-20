@@ -1,0 +1,216 @@
+{
+  "templates": [
+    {
+      "name": "loyalty",
+      "urls": [
+        "https://www.marriott.com/loyalty/member-benefits.mi"
+      ],
+      "representativeUrl": "https://www.marriott.com/loyalty/member-benefits.mi",
+      "description": "Marriott Bonvoy loyalty landing pages: photo hero, tier tabs, comparison tables, card grids and brand portfolio",
+      "blocks": [
+        {
+          "name": "hero-overlay",
+          "instances": [
+            ".hero-banner"
+          ]
+        },
+        {
+          "name": "tabs-icon-panel",
+          "instances": [
+            "section:has(> .membership-tiers__panel)"
+          ]
+        },
+        {
+          "name": "card-link-banner",
+          "instances": [
+            ".minicardlink"
+          ]
+        },
+        {
+          "name": "table-comparison",
+          "instances": [
+            ".table-container"
+          ]
+        },
+        {
+          "name": "cards-image-link",
+          "instances": [
+            ".pointswrapper__cards"
+          ]
+        },
+        {
+          "name": "cards-overlay",
+          "instances": [
+            ".glide:has(.card-layered-wrapper)"
+          ]
+        },
+        {
+          "name": "cards-icon",
+          "instances": [
+            "div:has(> .row.add-gutter-space-top)"
+          ]
+        },
+        {
+          "name": "cards-logo-grid",
+          "instances": [
+            ".brand-ribbon-category-container"
+          ]
+        }
+      ],
+      "urlPattern": "/loyalty/*",
+      "sections": [
+        {
+          "id": "s1",
+          "name": "hero",
+          "selector": [
+            ".account-page-wrapper > div:has(.hero-3x1)",
+            ".account-page-wrapper > div:nth-child(3)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-overlay"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s2",
+          "name": "membership-tiers",
+          "selector": [
+            ".account-page-wrapper > div:has(.membership-tiers__heading)",
+            ".account-page-wrapper > div:nth-child(5)"
+          ],
+          "style": "card, centered",
+          "blocks": [
+            "tabs-icon-panel"
+          ],
+          "defaultContent": [
+            ".membership-tiers__heading"
+          ]
+        },
+        {
+          "id": "s3",
+          "name": "lifetime-benefits",
+          "selector": [
+            ".account-page-wrapper > div:has(.minicardlink)",
+            ".account-page-wrapper > div:nth-child(6)"
+          ],
+          "style": null,
+          "blocks": [
+            "card-link-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s4",
+          "name": "compare-program-benefits",
+          "selector": [
+            ".account-page-wrapper > div:has(.table-container):has(.disclaimerText)",
+            ".account-page-wrapper > div:nth-child(7)"
+          ],
+          "style": null,
+          "blocks": [
+            "table-comparison"
+          ],
+          "defaultContent": [
+            ".px-0.mt-md-3 .t-title-s",
+            ".disclaimerText"
+          ]
+        },
+        {
+          "id": "s5",
+          "name": "compare-partner-benefits",
+          "selector": [
+            ".account-page-wrapper > div:has(.table-container):not(:has(.disclaimerText))",
+            ".account-page-wrapper > div:nth-child(8)"
+          ],
+          "style": null,
+          "blocks": [
+            "table-comparison"
+          ],
+          "defaultContent": [
+            ".px-0.mt-md-3 .t-title-s"
+          ]
+        },
+        {
+          "id": "s6",
+          "name": "points",
+          "selector": [
+            ".account-page-wrapper > div:has(.pointswrapper)",
+            ".account-page-wrapper > div:nth-child(9)"
+          ],
+          "style": "split",
+          "blocks": [
+            "cards-image-link"
+          ],
+          "defaultContent": [
+            ".pointswrapper__header",
+            ".pointswrapper__description",
+            ".pointswrapper__list"
+          ]
+        },
+        {
+          "id": "s7",
+          "name": "join-hero",
+          "selector": [
+            ".account-page-wrapper > div:has(.hero-2x1)",
+            ".account-page-wrapper > div:nth-child(10)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-overlay"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "s8",
+          "name": "more-ways-to-explore",
+          "selector": [
+            ".account-page-wrapper > div:has(.card-layered-wrapper)",
+            ".account-page-wrapper > div:nth-child(12)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-overlay"
+          ],
+          "defaultContent": [
+            ".carousal_header"
+          ]
+        },
+        {
+          "id": "s9",
+          "name": "unlock-more-with-points",
+          "selector": [
+            ".account-page-wrapper > div:has(.datablock-container)",
+            ".account-page-wrapper > div:nth-child(13)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-icon"
+          ],
+          "defaultContent": [
+            ".add-gutter-space-top h2, .add-gutter-space-top h3"
+          ]
+        },
+        {
+          "id": "s10",
+          "name": "brand-portfolio",
+          "selector": [
+            ".account-page-wrapper > div:has(.brand-ribbon-full-container)",
+            ".account-page-wrapper > div:nth-child(14)"
+          ],
+          "style": "white, centered",
+          "blocks": [
+            "cards-logo-grid"
+          ],
+          "defaultContent": [
+            ".brand-ribbon-logo-container",
+            ".brand-ribbon-header"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}

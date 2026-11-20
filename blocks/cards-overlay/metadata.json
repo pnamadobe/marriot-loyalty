@@ -1,0 +1,27 @@
+{
+  "variantName": "cards-overlay",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "linked image cards with eyebrow and title overlaid on the photo",
+    "layout": "responsive grid of tall image tiles; text bottom-aligned over a dark gradient; whole card clickable"
+  },
+  "contentPattern": {
+    "structure": "one row per card: cell 1 image; cell 2 optional eyebrow paragraph, title heading and link (the last link covers the card)",
+    "rows": [
+      {
+        "row": "one per card",
+        "cells": [
+          "Image or icon",
+          "Optional eyebrow, title heading, description, CTA link (or linked logo images for cards-logo-grid)"
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "More Ways to Explore style promotional tiles.",
+  "reuseGuidance": "Use when the text sits on the image. For text below the image use cards-image-link.",
+  "sourceUrl": "https://www.marriott.com/loyalty/member-benefits.mi",
+  "sectionMetadata": []
+}

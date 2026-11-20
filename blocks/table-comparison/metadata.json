@@ -1,0 +1,42 @@
+{
+  "variantName": "table-comparison",
+  "baseBlock": "table",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "benefit comparison matrix across membership tiers with check icons for included benefits",
+    "layout": "full-width table; first column (benefit) left-aligned and sticky when the table scrolls horizontally on small screens; tier columns centered"
+  },
+  "contentPattern": {
+    "structure": "row 1: corner label then one cell per tier (tier name and qualifying nights); then one row per benefit: cell 1 bold benefit name, description and optional \"More Details\" link; one cell per tier holding a check icon (included), a short value, or nothing (not included)",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          "Elite Benefits by Tier",
+          "Silver Elite / Stay 10 nights/year",
+          "Gold Elite / Stay 25 nights/year",
+          "Platinum Elite / Stay 50 nights/year",
+          "Titanium Elite / Stay 75 nights/year",
+          "Ambassador Elite / Stay 100 nights/year + $23,000 USD Spend"
+        ]
+      },
+      {
+        "row": "one per benefit",
+        "cells": [
+          "Bold benefit name, description, optional link",
+          "Tier 1 value or check icon",
+          "Tier 2",
+          "Tier 3",
+          "Tier 4",
+          "Tier 5"
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Program and partner benefit comparisons by tier.",
+  "reuseGuidance": "Use for any feature-by-plan matrix. Give check icons alt text such as \"Included\" so the table reads correctly to screen readers. For plain data tables use table.",
+  "sourceUrl": "https://www.marriott.com/loyalty/member-benefits.mi",
+  "sectionMetadata": []
+}
